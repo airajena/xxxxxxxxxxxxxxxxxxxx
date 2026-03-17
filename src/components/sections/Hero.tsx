@@ -1,11 +1,22 @@
 import { motion } from "framer-motion";
-import { heroStats } from "@/data/content";
-import StatCard from "@/components/ui/StatCard";
 
 const Hero = () => (
   <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-primary">
+    {/* Background Image */}
+    <div 
+      className="absolute inset-0 z-0"
+      style={{
+        backgroundImage: "url('/images/bg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    />
+    
+    {/* Dark Overlay to ensure text readability */}
+    <div className="absolute inset-0 bg-primary/80 z-0" />
+
     {/* Pattern overlay */}
-    <div className="absolute inset-0 opacity-10" style={{
+    <div className="absolute inset-0 opacity-10 z-0" style={{
       backgroundImage: "radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)",
       backgroundSize: "32px 32px",
     }} />
@@ -33,7 +44,7 @@ const Hero = () => (
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-primary-foreground/70 max-w-2xl mb-8"
+          className="text-lg md:text-xl text-primary-foreground max-w-2xl mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
@@ -61,13 +72,6 @@ const Hero = () => (
             Learn More
           </a>
         </motion.div>
-      </div>
-
-      {/* Floating stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl">
-        {heroStats.map((stat, i) => (
-          <StatCard key={stat.label} value={stat.value} label={stat.label} light index={i} />
-        ))}
       </div>
     </div>
   </section>

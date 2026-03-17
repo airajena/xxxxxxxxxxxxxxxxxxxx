@@ -27,7 +27,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a href="#home" className="font-heading text-2xl font-bold text-primary">
+          <a href="#home" className={`font-heading text-2xl font-bold ${scrolled ? "text-primary" : "text-primary-foreground"}`}>
             NuRegen
           </a>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => handleClick(link.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-sm font-medium transition-colors ${scrolled ? "text-muted-foreground hover:text-foreground" : "text-primary-foreground/80 hover:text-primary-foreground"}`}
               >
                 {link.label}
               </button>
@@ -51,7 +51,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile toggle */}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden p-2 text-foreground">
+          <button onClick={() => setMobileOpen(!mobileOpen)} className={`md:hidden p-2 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}>
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

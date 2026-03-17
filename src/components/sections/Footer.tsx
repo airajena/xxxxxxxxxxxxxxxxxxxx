@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const Footer = () => (
   <footer className="bg-foreground text-primary-foreground py-16">
     <div className="container mx-auto px-4 md:px-6">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <h3 className="font-heading text-xl font-bold mb-3">NuRegen</h3>
@@ -49,22 +49,7 @@ const Footer = () => (
           </ul>
         </div>
 
-        {/* Social */}
-        <div>
-          <h4 className="font-heading text-sm font-semibold uppercase tracking-wider mb-4 text-primary-foreground/80">
-            Follow Us
-          </h4>
-          <div className="flex gap-3">
-            {["LinkedIn", "Twitter", "Instagram"].map((name) => (
-              <div
-                key={name}
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 flex items-center justify-center text-primary-foreground/60 text-xs font-medium hover:bg-primary-foreground/20 transition-colors cursor-pointer"
-              >
-                {name[0]}
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
 
       <div className="border-t border-primary-foreground/10 pt-6 text-center text-xs text-primary-foreground/40">

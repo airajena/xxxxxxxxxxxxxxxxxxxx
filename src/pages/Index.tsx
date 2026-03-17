@@ -17,7 +17,6 @@ const Index = () => (
     <WhySustainability />
     <CompanyOverview />
     <CoreFocusAreas />
-    <ImplementationStrength />
     <TechnicalExpertise />
     <Services />
     <Process />

@@ -3,7 +3,6 @@ export const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Projects", href: "#focus" },
   { label: "About Us", href: "#about" },
-  { label: "Blog", href: "#blog" },
 ];
 
 export const heroStats = [
@@ -154,7 +153,7 @@ export const processSteps = [
 ];
 
 export const contactInfo = {
-  phones: ["+91-XXXXX-XXXXX", "+91-XXXXX-XXXXX"],
-  email: "info@nuregen.in",
+  phones: ["+91 9676598585", "+91 9439450849"],
+  email: "infonuregen@gmail.com",
   address: "Bhubaneswar, Odisha, India",
 };
